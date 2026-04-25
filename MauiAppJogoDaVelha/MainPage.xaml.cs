@@ -1,13 +1,13 @@
-﻿namespace MauiAppJogoDaVelha
+﻿namespace MauiAppJogoDaVelha  // Declaração do namespace MauiAppJogoDaVelha
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage // Declaração da classe MainPage que herda de ContentPage
     {
         string vez = "X"; // Variável vez com o valor de X para controlar a vez do jogador de X para O
 
-        public MainPage()
+        public MainPage() // Construtor da classe MainPage
         {
-            InitializeComponent();
-                zerarJogo(); // garante que todos os botões começam vazios
+            InitializeComponent(); // Inicializa os componentes da página
+            zerarJogo(); // garante que todos os botões começam vazios
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -19,11 +19,13 @@
             if (vez == "X")
             {
                 btn.Text = "X";  // Começa com o jogador X e a variável vez faz a troca para O
+                btn.TextColor = Colors.Red; // Define a cor do texto X para vermelho
                 vez = "O";
             }
                 else
                 {
                     btn.Text = "O"; // Quando o jogador O jogar, a variável vez faz a troca para X
+                    btn.TextColor = Colors.Blue; // Define a cor do texto O para azul
                     vez = "X";
                 }
 

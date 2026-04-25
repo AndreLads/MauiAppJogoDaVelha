@@ -4,35 +4,35 @@
              x:Class="MauiAppJogoDaVelha.MainPage">
     
     <!-- Bloco para definir cor de fundo -->
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-            <GradientStop Color="Purple" Offset="0.1"></GradientStop>
-            <GradientStop Color="Red" Offset="1.1"></GradientStop>
-        </LinearGradientBrush>
-    </ContentPage.Background>
+    <ContentPage.Background> <!-- Definindo um gradiente de fundo -->
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0"> <!-- Definindo a direção do gradiente, superior esquerdo para inferior direito -->
+            <GradientStop Color="Black" Offset="0.1"></GradientStop> <!-- Cor inicial do gradiente -->
+            <GradientStop Color="BurlyWood" Offset="1.0"></GradientStop> <!-- Cor final do gradiente -->
+        </LinearGradientBrush> <!-- Fechando o gradiente de fundo -->
+    </ContentPage.Background> <!-- Fechando a definição de fundo -->
 
         <!-- Bloco para definir estilos de recursos -->
-    <ContentPage.Resources>
-        <Style TargetType="Button">
-            <Setter Property="BackgroundColor" Value="Transparent"></Setter>
-            <Setter Property="CornerRadius" Value="15"></Setter>
-            <Setter Property="TextColor" Value="White"></Setter>
-            <Setter Property="FontSize" Value="80"></Setter>
-            <Setter Property="BorderWidth" Value="1"></Setter>
-            <Setter Property="BorderColor" Value="White"></Setter>
-        </Style>
-    </ContentPage.Resources>
+    <ContentPage.Resources> <!-- Definindo estilos de recursos -->
+        <Style TargetType="Button"> <!-- Estilo para os botões -->
+            <Setter Property="BackgroundColor" Value="Transparent"></Setter> <!-- Cor de fundo dos botões -->
+            <Setter Property="CornerRadius" Value="15"></Setter> <!-- Raio de arredondamento dos cantos dos botões -->
+            <Setter Property="TextColor" Value="White"></Setter> <!-- Botão inicialmente será branco, mas alterado quando o jogador X ou O jogar -->
+            <Setter Property="FontSize" Value="80"></Setter> <!-- Tamanho da fonte dos botões -->
+            <Setter Property="BorderWidth" Value="1"></Setter> <!-- Largura da borda dos botões -->
+            <Setter Property="BorderColor" Value="Goldenrod"></Setter> <!-- Cor da borda dos botões -->
+        </Style> <!-- Fechando o estilo dos botões -->
+    </ContentPage.Resources> <!-- Fechando a definição de estilos de recursos -->
     
 <!-- Usando  a propriedade Grid com definições de linhas e colunas para criar a tabela -->
     <Grid RowDefinitions="*, *, *, *" 
           ColumnDefinitions="*, *, *"
-          ColumnSpacing="10" RowSpacing="10" Margin="10">
+          ColumnSpacing="10" RowSpacing="10" Margin="10"> <!-- Definindo os espaçamentos e margens da tabela -->
         
         <!-- Propriedade Label para o título do jogo -->
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
                Text="Jogo da Velha" 
                HorizontalTextAlignment="Center"
-               TextColor="White"
+               TextColor="DarkGoldenrod"
                FontAttributes="Bold" 
                FontSize="40"
                ></Label>
